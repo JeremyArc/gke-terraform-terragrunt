@@ -1,3 +1,10 @@
+dependency "service_account" {
+  config_path = "../service_account"
+}
+
+dependency "vpc" {
+  config_path = "../vpc"
+}
 # Automatically find the root terragrunt.hcl and inherit its configuration
 include {
   path = find_in_parent_folders()
@@ -9,14 +16,14 @@ terraform {
 
 inputs = {
 # gke variables
-project_id = "k8s-cicd-demo"
+project_id = "k8s-cicd-demo-426216"
 cluster_name = "k8s-demo"
 region = "asia-southeast1"
 zones = ["asia-southeast1-a"]
-network = "default"
-subnetwork = "asia-southeast1"
-ip_range_pods = "asia-southeast-gke-pods"
-ip_range_services = "asia-southeast-gke-service"
+network = dependency.vpc.demo_vpc
+subnetwork = dependency.vpc.private_subnet
+ip_range_pods =  "${dependency.vpc.private_subnet}-gke-pods"
+ip_range_services = "${dependency.vpc.private_subnet}-gke-service"
 http_load_balancing = true
 network_policy = true
 horizontal_pod_autoscaling = true
@@ -38,7 +45,7 @@ enable_gvnic = false
 logging_variant = "DEFAULT"
 auto_repair = true
 auto_upgrade = true
-service_account = "project-service-account@k8s-cicd-demo.iam.gserviceaccount.com"
+service_account = dependency.service_account.service_account_email
 preemptible = true
 initial_node_count = 1
 accelerator_count = 0
