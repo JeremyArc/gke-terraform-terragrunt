@@ -63,10 +63,6 @@ variable "max_count" {
     description = "maximum number of nodes and must greater than min_count"
     type = number
 }
-variable "spot" {
-    description = "A boolean that represents whether the underlying node VMs are spot"
-    type = bool
-}
 variable "disk_size_gb" {
     type = number
 }
@@ -92,9 +88,6 @@ variable "auto_repair" {
 }
 variable "auto_upgrade" {
   type = bool
-}
-variable "service_account" {
-  type = string
 }
 variable "preemptible" {
   type = bool

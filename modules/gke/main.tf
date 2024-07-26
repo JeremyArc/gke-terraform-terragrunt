@@ -23,6 +23,7 @@ module "gke" {
   horizontal_pod_autoscaling = var.horizontal_pod_autoscaling
   filestore_csi_driver        = var.filestore_csi_driver
   dns_cache                  = var.dns_cache
+  deletion_protection        = false
 
   node_pools = [
     {
@@ -31,7 +32,6 @@ module "gke" {
       node_locations              = var.node_locations
       min_count                   = var.min_count
       max_count                   = var.max_count
-      spot                        = var.spot
       disk_size_gb                = var.disk_size_gb
       disk_type                   = var.disk_type
       image_type                  = var.image_type
@@ -40,7 +40,6 @@ module "gke" {
       logging_variant             = var.logging_variant
       auto_repair                 = var.auto_repair
       auto_upgrade                = var.auto_upgrade
-      service_account             = var.service_account
       preemptible                 = var.preemptible
       initial_node_count          = var.initial_node_count
       accelerator_count           = var.accelerator_count
