@@ -1,26 +1,25 @@
 <!-- BEGIN_TF_DOCS -->
-Any arbitrary text can be placed anywhere in the content
+## Requirements
 
-
-
-and even in between sections
+No requirements.
 
 ## Providers
 
 No providers.
 
-and they don't even need to be in the default order
+## Modules
 
-## Outputs
+No modules.
 
-No outputs.
+## Resources
 
+No resources.
 
 ## Inputs
 
 No inputs.
 
+## Outputs
 
-## Resources
-
+No outputs.
 <!-- END_TF_DOCS -->
