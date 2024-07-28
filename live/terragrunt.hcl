@@ -9,7 +9,7 @@ remote_state {
     bucket = "${local.env}-jessada-terragrunt-state"
     prefix = "${path_relative_to_include()}/terraform.tfstate"
     project = "k8s-cicd-demo-426216"
-    location = "ASIA-SOUTHEAST1"
+    location = "asia-southeast1"
   }
   generate = {
     path      = "backend.tf"

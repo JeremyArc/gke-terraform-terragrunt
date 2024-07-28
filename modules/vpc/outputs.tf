@@ -1,33 +1,14 @@
-# output "subnets_secondary_ranges" {
-#    value = {
-#     for subnet, ranges in module.vpc.subnets_secondary_ranges : subnet => ranges
-#   }
-# }
+output "NETWORK_NAME" {
+  value = module.vpc.network_name
+}
 
-# output "private_subnet" {
-#   value = module.vpc.subnets["asia-southeast1/private-subnet-1"].name
-# }
+output "PRIVATE_SUBNET_NAME" {
+  value = module.vpc.subnets["asia-southeast1/private-subnet-1"].name
+}
 
-# output "test_vpc" {
-#   value = module.vpc.network_name
-# }
-
-# output "subnet_secondary_ip_range" {
-#     value = "ddddd"
-# }
-
-# output "subnet_secondary" {
-#   value = module.vpc.subnets_secondary_ranges
-# }
-
-# output "network" {
-#   value = module.vpc.network
-# }
-
-# output "projectId" {
-#   value = module.vpc.project_id
-# }
-
-output "subnets_secondary_ranges" {
-  value = module.vpc.subnets_secondary_ranges
+output "PRIVATE_SUBNET_IP_RANGE_POD" {
+  value = module.vpc.subnets_secondary_ranges[0][0].range_name
+}
+output "PRIVATE_SUBNET_IP_RANGE_SERVICES" {
+  value = module.vpc.subnets_secondary_ranges[0][1].range_name
 }
