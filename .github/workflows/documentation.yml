@@ -13,8 +13,8 @@ jobs:
     - name: Render terraform docs and push changes back to PR
       uses: terraform-docs/gh-actions@main
       with:
-        # Matrix Strategy: The matrix keyword is used to define a list of modules (vpc and gke). The job will run once for each module.
-        working-dir: ./modules/${{ matrix.module }}
+        find-dir: ./modules
+        recursive: true
         output-file: README.md
         output-method: inject
         git-push: "true"
