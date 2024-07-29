@@ -32,6 +32,7 @@ This repository contains Terraform and Terragrunt configurations for deploying a
 
 - [Terraform](https://www.terraform.io/downloads.html) v1.0.0 or later
 - [Terragrunt](https://terragrunt.gruntwork.io/) v0.28.0 or later
+- [Terraform-Docs](https://github.com/terraform-docs/terraform-docs)
 - Google Cloud SDK configured and authenticated
 - A Google Cloud project with billing enabled
 
