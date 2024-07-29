@@ -31,8 +31,8 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_NETWORK_NAME"></a> [NETWORK\_NAME](#output\_NETWORK\_NAME) | n/a |
-| <a name="output_PRIVATE_SUBNET_IP_RANGE_POD"></a> [PRIVATE\_SUBNET\_IP\_RANGE\_POD](#output\_PRIVATE\_SUBNET\_IP\_RANGE\_POD) | n/a |
-| <a name="output_PRIVATE_SUBNET_IP_RANGE_SERVICES"></a> [PRIVATE\_SUBNET\_IP\_RANGE\_SERVICES](#output\_PRIVATE\_SUBNET\_IP\_RANGE\_SERVICES) | n/a |
-| <a name="output_PRIVATE_SUBNET_NAME"></a> [PRIVATE\_SUBNET\_NAME](#output\_PRIVATE\_SUBNET\_NAME) | n/a |
+| <a name="output_network_name"></a> [network\_name](#output\_network\_name) | n/a |
+| <a name="output_private_subnet_ip_range_pod"></a> [private\_subnet\_ip\_range\_pod](#output\_private\_subnet\_ip\_range\_pod) | n/a |
+| <a name="output_private_subnet_ip_range_services"></a> [private\_subnet\_ip\_range\_services](#output\_private\_subnet\_ip\_range\_services) | n/a |
+| <a name="output_private_subnet_name"></a> [private\_subnet\_name](#output\_private\_subnet\_name) | n/a |
 <!-- END_TF_DOCS -->
